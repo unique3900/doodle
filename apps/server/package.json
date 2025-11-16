@@ -14,10 +14,12 @@
   },
   "dependencies": {
     "@monorepo/types": "workspace:*",
+    "@types/ws": "^8.18.1",
     "cors": "2.8.5",
     "express": "^5.1.0",
     "morgan": "^1.10.1",
-    "ts-node-dev": "^2.0.0"
+    "ts-node-dev": "^2.0.0",
+    "ws": "^8.18.3"
   },
   "devDependencies": {
     "@monorepo/eslint-config": "workspace:*",
