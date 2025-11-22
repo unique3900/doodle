@@ -15,21 +15,21 @@ const gameManager = GameManager;
 
 // Middleware
 app.use(morgan("tiny"));
-app.use(express.json({ limit: "100mb" }));
-app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
-  );
-  next();
-});
-app.use(
-  cors({
-    credentials: true,
-    origin: ["http://localhost:3000"],
-  })
-);
+app.use(express.json({ limit: "1000mb" }));
+// app.use((req, res, next) => {
+//   res.header("Access-Control-Allow-Origin", "*");
+//   res.header(
+//     "Access-Control-Allow-Headers",
+//     "Origin, X-Requested-With, Content-Type, Accept"
+//   );
+//   next();
+// });
+// app.use(
+//   cors({
+//     credentials: true,
+//     origin: [""],
+//   })
+// );
 
 // Routes
 app.use("/v1", routes);

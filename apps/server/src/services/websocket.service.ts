@@ -41,8 +41,8 @@ export function initializeWebSocketServer(
     });
 
     // Close handler
-    extWs.on("close", () => {
-      console.log("Client disconnected");
+    extWs.on("close",(code: number, reason: Buffer) => {
+      console.log(`Disconnect - Code: ${code}, Reason: ${reason.toString()}, Player: ${extWs.playerId}`);
       if (extWs.playerId && extWs.roomId) {
         handlePlayerDisconnect(extWs, gameManager, wss);
       }
