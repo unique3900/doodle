@@ -20,6 +20,7 @@
   },
   "exports": {
     ".": "./src",
-    "./styles": "./src/styles.ts"
+    "./styles": "./src/styles.ts",
+    "./websocket-client": "./src/websocket-client.ts"
   }
 }
